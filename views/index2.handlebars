@@ -1,0 +1,51 @@
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Random Password Generator<i class="fas fa-key"></i>
+                    </h5>
+                    <hr>
+                    <form method="POST" action="/">
+                        <div class="form-group form-row">
+                            <label for="length" class="col-md-4 col-form-label">Password Length</label>
+                            <div class="col-md-8">
+                                <input type="number" name="length" class="form-control" id="length" min="4" max="16">
+                                <small class="text-muted form-text"> Length is availabe between 4 ~ 16</small>
+                            </div>
+                        </div>
+                        {{!-- align-items-center讓div中的各元素垂直置中對齊 --}}
+                        <div class="form-group form-row mb-2 align-items-center">
+                            <label for="lowercase" class="col-md-4 col-form-label">Include Lowercase Characters</label>
+                            <div class="col-md-8">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="lowercase" name="lowercase">
+                                    <label for="lowercase" class="custom-control-label">
+                                        (e.g. abcdefg)
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-row">
+                            <label for="exclude-characters" class="col-md-4 col-form-label">Password Length</label>
+                            <div class="col-md-8">
+                                <input type="number" name="excludeCharacters" class="form-control"
+                                    id="exclude-characters">
+                                <small class="text-muted form-text"> These characters will not appear in the
+                                    passwrod</small>
+                            </div>
+                        </div>
+                        <button class="btn btn-success" type="submit">
+                            Generate Password
+                        </button>
+                    </form>
+                </div>
+                <small class="card-footer">
+                    Idea is inspired by <a href="https://passwordsgenerator.net/" target="_blank">Strong Random
+                        Password</a>
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
